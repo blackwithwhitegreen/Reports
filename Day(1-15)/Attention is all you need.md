@@ -22,12 +22,6 @@ The model consists of encoder-decoder architecture:
 •	The encoder processes input sequences using multi-head self-attention and feedforward layers, capturing contextual relationships between words.
 •	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
 
-## Key Advantages Over RNNs and CNNs  
-| Model | Parallelization | Long-Term Dependencies | Efficiency |
-|--------|--------------|-------------------|-----------|
-| RNNs/LSTMs | Low | Weak due to vanishing gradients | Slow |
-| CNNs | Moderate | Captures local context well | Faster than RNNs |
-| **Transformers** | **High** | **Strong via self-attention** | **Highly efficient** |
 
 # BERT
 
@@ -141,6 +135,12 @@ Each attention head independently computes attention scores and produces an outp
 
 LSTMs and RNNs are not used in Transformer models because they rely on sequential processing, making them inefficient for handling long-range dependencies and parallel computation. Transformers, on the other hand, use self-attention, allowing them to process entire sequences simultaneously rather than step-by-step, significantly improving training speed and scalability. Additionally, RNNs suffer from the vanishing gradient problem, making it difficult to capture long-term dependencies, whereas Transformers use positional encodings and attention mechanisms to effectively model relationships between distant words. The lack of recurrence in Transformers also enables better utilization of modern hardware, such as GPUs and TPUs, making them more efficient for large-scale natural language processing tasks.
 
+## Key Advantages Over RNNs and CNNs  
+| Model | Parallelization | Long-Term Dependencies | Efficiency |
+|--------|--------------|-------------------|-----------|
+| RNNs/LSTMs | Low | Weak due to vanishing gradients | Slow |
+| CNNs | Moderate | Captures local context well | Faster than RNNs |
+| **Transformers** | **High** | **Strong via self-attention** | **Highly efficient** |
 
 # Challenges and Ongoing Research  
 
