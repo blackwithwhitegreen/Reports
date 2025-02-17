@@ -17,6 +17,7 @@ The model consists of encoder-decoder architecture:
 # Encoder
 
 The encoder in a Transformer model consists of multiple stacked layers that process input tokens to generate rich contextual representations. First, input tokens are converted into embeddings, with positional encodings added to retain word order. Each encoder layer includes a multi-head self-attention mechanism, allowing tokens to attend to different parts of the sequence, followed by a feed-forward network (FFN) that applies non-linearity to enhance feature extraction. Residual connections and layer normalization are used after both self-attention and FFN layers to stabilize training. By stacking multiple encoder layers, the model captures deep contextual relationships, making the encoded representations highly meaningful for downstream tasks like translation or text generation.
+
 ---
 
 <img width="202" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
@@ -41,14 +42,23 @@ Self-attention is a mechanism that enables a model to weigh different parts of a
 
 
 # Scaled dot-Product Attention
+
 Scaled dot-product attention is the core mechanism behind self-attention in Transformers. It determines the importance of different tokens in a sequence by computing attention scores between Query (Q), Key (K), and Value (V) vectors.
+
 ---
 The process involves:
 
-* Computing attention scores using the dot product of Q and K: 
+* Computing attention scores using the dot product of Q and K:
+
+---
                                Score = QKT
-* Scaling the scores by dividing by √dk (the dimension of k) to stabilize gradients:                                         
-                           Scaled Score = QKT / √dk      
+---
+* Scaling the scores by dividing by √dk (the dimension of k) to stabilize gradients:
+
+---
+                           Scaled Score = QKT / √dk
+
+---
   
 * Applying softmax to convert score into attention weights.
 * Multiplying the weights with V to get the final output.
@@ -67,38 +77,46 @@ The process involves:
 
 
 # Multi-Head Attention
+
 Multi-head attention is a key component of the Transformer model that enhances the self-attention mechanism by applying multiple attention layers in parallel. Instead of using a single attention function, the input is projected into multiple sets of Query (Q), Key (K), and Value (V) matrices, allowing the model to capture different aspects of relationships between words.
 Each attention head independently computes attention scores and produces an output. These outputs are then concatenated and passed through a final projection layer. This approach enables the model to focus on multiple positions in the sequence simultaneously, improving its ability to capture complex dependencies.
 
 # Why LSTMs and RNNs are not used
+
 LSTMs and RNNs are not used in Transformer models because they rely on sequential processing, making them inefficient for handling long-range dependencies and parallel computation. Transformers, on the other hand, use self-attention, allowing them to process entire sequences simultaneously rather than step-by-step, significantly improving training speed and scalability. Additionally, RNNs suffer from the vanishing gradient problem, making it difficult to capture long-term dependencies, whereas Transformers use positional encodings and attention mechanisms to effectively model relationships between distant words. The lack of recurrence in Transformers also enables better utilization of modern hardware, such as GPUs and TPUs, making them more efficient for large-scale natural language processing tasks.
 
 
 # Challenges and Ongoing Research  
+
 Computational and Environmental Costs  
 - Training BERT-Large: ~1,024 TPU v3 days, ~1,400 kg CO2 emissions.  
 - Memory Bottlenecks: Long sequences (e.g., 4k tokens) require optimizations like sparse attention (Longformer) or memory-efficient kernels (FlashAttention).  
 
 
 # Model Interpretability  
+
 - Attention Visualization: Tools like BertViz map attention heads but lack semantic clarity.  
 - Probing Studies: Reveal that lower layers capture syntax, while higher layers handle semantics.  
 
-# Efficiency Improvements  
+# Efficiency Improvements 
+
 - Quantization: Reducing precision (e.g., 16-bit to 8-bit) for faster inference.  
 - Pruning: Removing redundant attention heads/weights.  
 - Hybrid Models: Combining Transformers with RNNs (e.g., Transformer-XH).  
 
 # Future Directions  
+
 1. Efficient Architectures: Models like Linformer (linear attention) and Performer (kernel approximations).  
 2. Multimodal Transformers: CLIP (text-image), Wav2Vec 2.0 (speech).  
 3. Explainability: Developing tools to decode self-attention’s decision-making.  
 4. General-Purpose AI: Towards models that reason across text, vision, and robotics (e.g., Gato).  
 
 # Conclusion  
+
 The Transformer and BERT redefined NLP by prioritizing attention over recurrence, enabling bidirectional context capture, and democratizing transfer learning. While challenges like computational costs and interpretability persist, their legacy lies in enabling adaptable, high-performance language systems. Future work will focus on efficiency, ethical AI, and expanding Transformers beyond language into multimodal reasoning.  
 
 # References  
+
 1. Vaswani, A. et al. (2017). Attention Is All You Need. 
 2. Devlin, J. et al. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. 
 
