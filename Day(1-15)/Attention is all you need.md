@@ -30,6 +30,15 @@ BERT, which stands for Bidirectional Encoder Representations from Transformers, 
 special architecture called Transformers, focusing mainly on the encoder part to build smart
 language models.
 
+# Architecture  
+- Base Model:  
+  - Encoder-Only: Uses the Transformer’s encoder stack (12 or 24 layers).  
+  - Token Embeddings: WordPiece tokenization (30k vocabulary).  
+  - Segment Embeddings: Distinguishes sentence pairs (e.g., for NSP).  
+  - Position Embeddings: Same as Transformer.  
+
+
+#Pre-traing tasks
 ---
 1. Bidirectional Training: Unlike many models that read text in a single direction, BERT
 looks at the full context of words. It does this by training on a task called masked language
