@@ -17,9 +17,11 @@ The model consists of encoder-decoder architecture:
 # Encoder
 
 The encoder in a Transformer model consists of multiple stacked layers that process input tokens to generate rich contextual representations. First, input tokens are converted into embeddings, with positional encodings added to retain word order. Each encoder layer includes a multi-head self-attention mechanism, allowing tokens to attend to different parts of the sequence, followed by a feed-forward network (FFN) that applies non-linearity to enhance feature extraction. Residual connections and layer normalization are used after both self-attention and FFN layers to stabilize training. By stacking multiple encoder layers, the model captures deep contextual relationships, making the encoded representations highly meaningful for downstream tasks like translation or text generation.
+---
 
 <img width="202" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
 
+---
 # Calculation of Positional embedding
 
 ---
@@ -38,7 +40,7 @@ The decoder in a Transformer model generates output sequences by processing enco
 Self-attention is a mechanism that enables a model to weigh different parts of an input sequence when processing each token, capturing long-range dependencies efficiently. It works by transforming input embeddings into Query (Q), Key (K), and Value (V) vectors, computing attention scores using a scaled dot product, applying softmax to get attention weights, and then using these weights to compute a weighted sum of values. This allows for parallelization, better handling of long-range dependencies, and improved context sensitivity compared to RNNs. Self-attention is the core of multi-head attention in Transformer models, making them highly effective for NLP tasks.
 
 
-Scaled dot-Product Attention
+# Scaled dot-Product Attention
 Scaled dot-product attention is the core mechanism behind self-attention in Transformers. It determines the importance of different tokens in a sequence by computing attention scores between Query (Q), Key (K), and Value (V) vectors.
 The process involves:
 	Computing attention scores using the dot product of Q and K: 
@@ -49,6 +51,18 @@ Score = QKT
   `
 	Applying softmax to convert score into attention weights.
 	Multiplying the weights with V to get the final output.
+
+ ``` bash
+			import torch
+			import torch.nn.functional as F
+			
+			def scaled_dot_product_attention(Q, K, V, mask=None):
+			    return (lambda d_k, scores, attention_weights: (torch.matmul(attention_weights, V), attention_weights))(
+			        Q.shape[-1],
+			        torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)),
+			        F.softmax(torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)), dim=-1)
+			    )
+```
 
 
 # Multi-Head Attention
