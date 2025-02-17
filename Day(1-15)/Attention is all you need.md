@@ -4,7 +4,7 @@
 * Asif Iqbal khan(USAR)
 * Md.Wajid(USAR)
 * Yash Gupta(USICT)
-* Ankit(USAR)
+* Ankit Tayal(USAR)
 
 ---
 
@@ -21,6 +21,13 @@ The Transformer is a deep learning model introduced in 2017 that eliminates recu
 The model consists of encoder-decoder architecture:
 •	The encoder processes input sequences using multi-head self-attention and feedforward layers, capturing contextual relationships between words.
 •	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
+
+## Key Advantages Over RNNs and CNNs  
+| Model | Parallelization | Long-Term Dependencies | Efficiency |
+|--------|--------------|-------------------|-----------|
+| RNNs/LSTMs | Low | Weak due to vanishing gradients | Slow |
+| CNNs | Moderate | Captures local context well | Faster than RNNs |
+| **Transformers** | **High** | **Strong via self-attention** | **Highly efficient** |
 
 # BERT
 
