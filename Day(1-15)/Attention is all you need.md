@@ -15,19 +15,18 @@ Recurrent neural networks (RNNs), particularly LSTMs and gated recurrent network
 
 # Transformer model
 
-| <img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />| The Transformer is a deep learning model introduced in 2017 that eliminates recurrence and relies entirely on self-attention and feedforward layers to process sequential data. It is designed for parallelization, making it more efficient than RNNs and LSTMs for tasks like machine translation and language modeling.
+<img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />
+
+The Transformer is a deep learning model introduced in 2017 that eliminates recurrence and relies entirely on self-attention and feedforward layers to process sequential data. It is designed for parallelization, making it more efficient than RNNs and LSTMs for tasks like machine translation and language modeling.
 The model consists of encoder-decoder architecture:
 •	The encoder processes input sequences using multi-head self-attention and feedforward layers, capturing contextual relationships between words.
-•	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).|
+•	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
 
 
 # Encoder
-
-The encoder in a Transformer model consists of multiple stacked layers that process input tokens to generate rich contextual representations. First, input tokens are converted into embeddings, with positional encodings added to retain word order. Each encoder layer includes a multi-head self-attention mechanism, allowing tokens to attend to different parts of the sequence, followed by a feed-forward network (FFN) that applies non-linearity to enhance feature extraction. Residual connections and layer normalization are used after both self-attention and FFN layers to stabilize training. By stacking multiple encoder layers, the model captures deep contextual relationships, making the encoded representations highly meaningful for downstream tasks like translation or text generation.
-
 ---
 
-<img width="202" style="margin-left: 500px" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
+| <img width="202" style="margin-left: 500px" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" /> | The encoder in a Transformer model consists of multiple stacked layers that process input tokens to generate rich contextual representations. First, input tokens are converted into embeddings, with positional encodings added to retain word order. Each encoder layer includes a multi-head self-attention mechanism, allowing tokens to attend to different parts of the sequence, followed by a feed-forward network (FFN) that applies non-linearity to enhance feature extraction. Residual connections and layer normalization are used after both self-attention and FFN layers to stabilize training. By stacking multiple encoder layers, the model captures deep contextual relationships, making the encoded representations highly meaningful for downstream tasks like translation or text generation. |
 
 ---
 # Calculation of Positional embedding
