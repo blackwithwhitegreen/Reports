@@ -22,6 +22,31 @@ The model consists of encoder-decoder architecture:
 •	The encoder processes input sequences using multi-head self-attention and feedforward layers, capturing contextual relationships between words.
 •	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
 
+# BERT
+BERT, which stands for Bidirectional Encoder Representations from Transformers, utilizes a
+special architecture called Transformers, focusing mainly on the encoder part to build smart
+language models.
+
+---
+1. Bidirectional Training: Unlike many models that read text in a single direction, BERT
+looks at the full context of words. It does this by training on a task called masked language
+modeling, where certain words in a sentence are hidden. The model’s job is to guess these
+missing words by considering the context from both sides—left and right. This allows BERT
+to gain a deeper understanding of language.
+---
+3. Next Sentence Prediction (NSP): BERT also learns how sentences relate to one
+another. It does this through next sentence prediction, where it receives a pair of sentences
+and has to determine if they follow one another in the original text. This training helps the
+model get a grip on the connections and flow between sentences.
+---
+5. Fine-tuning: After BERT has been trained, its flexible structure allows it to be fine-tuned
+for specific tasks, such as classifying texts, answering questions, or recognizing names in a
+text. This adaptability makes BERT particularly useful for a range of applications in natural
+language processing.
+---
+Overall, BERT's approach to language understanding is groundbreaking and has opened up
+exciting possibilities in how we interact with machines using natural language
+---
 
 # Encoder
 The encoder in a Transformer model consists of multiple stacked layers that process input tokens to generate rich contextual representations. First, input tokens are converted into embeddings, with positional encodings added to retain word order. Each encoder layer includes a multi-head self-attention mechanism, allowing tokens to attend to different parts of the sequence, followed by a feed-forward network (FFN) that applies non-linearity to enhance feature extraction. Residual connections and layer normalization are used after both self-attention and FFN layers to stabilize training. By stacking multiple encoder layers, the model captures deep contextual relationships, making the encoded representations highly meaningful for downstream tasks like translation or text generation.
