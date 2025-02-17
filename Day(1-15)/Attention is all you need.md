@@ -21,7 +21,7 @@ The model consists of encoder-decoder architecture:
 •	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
 
 
-<img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />
+<br><br><br><img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />
 
 
 # Encoder
