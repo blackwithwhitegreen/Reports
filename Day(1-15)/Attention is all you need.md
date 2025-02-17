@@ -30,7 +30,7 @@ The encoder in a Transformer model consists of multiple stacked layers that proc
 
 ---
 
-<img width="202" style="margin-left: 50px" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
+<img width="202" style="margin-left: 500px" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
 
 ---
 # Calculation of Positional embedding
