@@ -1,10 +1,10 @@
 # Attention is all you need
 ---
-Aman singh(USAR) - (Coordinator)
-Asif Iqbal khan(USAR)
-Md.Wajid(USAR)
-Yash Gupta(USICT)
-Ankit(USAR)
+* Aman singh(USAR) - (Coordinator)
+* Asif Iqbal khan(USAR)
+* Md.Wajid(USAR)
+* Yash Gupta(USICT)
+* Ankit(USAR)
 
 ---
 
