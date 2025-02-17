@@ -44,7 +44,7 @@ The encoder in a Transformer model consists of multiple stacked layers that proc
 # Decoder
 The decoder in a Transformer model generates output sequences by processing encoded representations and previously generated tokens. Like the encoder, it consists of multiple layers, each containing key components. First, input tokens (such as previously generated words in translation tasks) are embedded with positional encodings. The decoder has a masked multi-head self-attention mechanism that prevents future tokens from being seen during training, ensuring autoregressive generation. Next, a multi-head attention layer attends to the encoder’s output, helping the decoder focus on relevant input information. A feed-forward network (FFN) follows, applying transformations to enhance feature extraction. Residual connections and layer normalization stabilize learning at each step. By stacking multiple decoder layers, the model refines token predictions, ultimately producing coherent and contextually appropriate sequences.
 
-<img width="800" alt="Image" src="https://github.com/user-attachments/assets/eb6b94e8-ad3c-4190-ac3e-a8756ff77238" />{width=500)
+<img width="500" alt="Image" src="https://github.com/user-attachments/assets/eb6b94e8-ad3c-4190-ac3e-a8756ff77238" />
 
 # Self Attention
 
