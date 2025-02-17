@@ -40,7 +40,7 @@ language models.
   - Position Embeddings: Same as Transformer.  
 
 
-##Pre-traing tasks
+## Pre-traing tasks
 ---
 1. Bidirectional Training: Unlike many models that read text in a single direction, BERT
 looks at the full context of words. It does this by training on a task called masked language
@@ -58,8 +58,10 @@ for specific tasks, such as classifying texts, answering questions, or recognizi
 text. This adaptability makes BERT particularly useful for a range of applications in natural
 language processing.
 ---
+
 Overall, BERT's approach to language understanding is groundbreaking and has opened up
 exciting possibilities in how we interact with machines using natural language
+
 ---
 
 ## Encoder
