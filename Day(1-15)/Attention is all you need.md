@@ -24,13 +24,14 @@ The model consists of encoder-decoder architecture:
 
 # BERT
 
-![Image](https://github.com/user-attachments/assets/9ad640dc-ddd1-462f-bb48-458af2f84af8)
-
 BERT, which stands for Bidirectional Encoder Representations from Transformers, utilizes a
 special architecture called Transformers, focusing mainly on the encoder part to build smart
 language models.
 
-# Architecture  
+# Architecture
+
+![Image](https://github.com/user-attachments/assets/9ad640dc-ddd1-462f-bb48-458af2f84af8)
+
 - Base Model:  
   - Encoder-Only: Uses the Transformer’s encoder stack (12 or 24 layers).  
   - Token Embeddings: WordPiece tokenization (30k vocabulary).  
