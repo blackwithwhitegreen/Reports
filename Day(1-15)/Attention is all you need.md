@@ -34,12 +34,12 @@ modeling, where certain words in a sentence are hidden. The model’s job is to 
 missing words by considering the context from both sides—left and right. This allows BERT
 to gain a deeper understanding of language.
 ---
-3. Next Sentence Prediction (NSP): BERT also learns how sentences relate to one
+2. Next Sentence Prediction (NSP): BERT also learns how sentences relate to one
 another. It does this through next sentence prediction, where it receives a pair of sentences
 and has to determine if they follow one another in the original text. This training helps the
 model get a grip on the connections and flow between sentences.
 ---
-5. Fine-tuning: After BERT has been trained, its flexible structure allows it to be fine-tuned
+3. Fine-tuning: After BERT has been trained, its flexible structure allows it to be fine-tuned
 for specific tasks, such as classifying texts, answering questions, or recognizing names in a
 text. This adaptability makes BERT particularly useful for a range of applications in natural
 language processing.
