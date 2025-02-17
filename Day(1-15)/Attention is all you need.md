@@ -21,7 +21,7 @@ The model consists of encoder-decoder architecture:
 •	The decoder generates output sequences by using both self-attention (to understand generated words) and encoder-decoder attention (to incorporate input information).
 
 
-<br><br><br><img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />
+<img width="1013" alt="Image" src="https://github.com/user-attachments/assets/c0439df2-f27e-467e-949a-04758ae73384" />
 
 
 # Encoder
@@ -30,7 +30,7 @@ The encoder in a Transformer model consists of multiple stacked layers that proc
 
 ---
 
-<img width="202" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
+<img width="202" style="margin-left: 50px" alt="Image" src="https://github.com/user-attachments/assets/356c76cc-6a34-4bb2-9c04-767e11ede9df" />
 
 ---
 # Calculation of Positional embedding
