@@ -42,15 +42,16 @@ Self-attention is a mechanism that enables a model to weigh different parts of a
 
 # Scaled dot-Product Attention
 Scaled dot-product attention is the core mechanism behind self-attention in Transformers. It determines the importance of different tokens in a sequence by computing attention scores between Query (Q), Key (K), and Value (V) vectors.
+---
 The process involves:
-	Computing attention scores using the dot product of Q and K: 
-Score = QKT
-	Scaling the scores by dividing by √dk (the dimension of k) to stabilize gradients:
-  ``                                         
-      Scaled Score = QKT / √dk      
-  `
-	Applying softmax to convert score into attention weights.
-	Multiplying the weights with V to get the final output.
+
+* Computing attention scores using the dot product of Q and K: 
+                               Score = QKT
+* Scaling the scores by dividing by √dk (the dimension of k) to stabilize gradients:                                         
+                           Scaled Score = QKT / √dk      
+  
+* Applying softmax to convert score into attention weights.
+* Multiplying the weights with V to get the final output.
 
  ``` bash
 			import torch
