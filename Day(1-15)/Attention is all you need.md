@@ -64,15 +64,15 @@ The process involves:
 * Multiplying the weights with V to get the final output.
 
  ``` bash
-			import torch
-			import torch.nn.functional as F
-			
-			def scaled_dot_product_attention(Q, K, V, mask=None):
-			    return (lambda d_k, scores, attention_weights: (torch.matmul(attention_weights, V), attention_weights))(
-			        Q.shape[-1],
-			        torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)),
-			        F.softmax(torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)), dim=-1)
-			    )
+import torch
+import torch.nn.functional as F
+
+def scaled_dot_product_attention(Q, K, V, mask=None):
+    return (lambda d_k, scores, attention_weights: (torch.matmul(attention_weights, V), attention_weights))(
+        Q.shape[-1],
+        torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)),
+        F.softmax(torch.matmul(Q, K.transpose(-2, -1)) / torch.sqrt(torch.tensor(Q.shape[-1], dtype=torch.float32)), dim=-1)
+    )
 ```
 
 
